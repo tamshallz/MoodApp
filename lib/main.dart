@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mood_app/screens/angry.dart';
+import 'package:mood_app/screens/dashboard.dart';
 import 'package:mood_app/screens/happy.dart';
 import 'package:mood_app/screens/sad.dart';
 
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
         SadFacePage.id: (context) => SadFacePage(),
         HappyFace.id: (context) => HappyFace(),
         AngryScreen.id: (context) => AngryScreen(),
+        DashBoard.id: (context) => DashBoard(),
+        // Dash.id: (context) => Dash(),
       },
     );
   }

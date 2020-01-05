@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mood_app/screens/angry.dart';
+import 'package:mood_app/screens/assets/colorsused.dart';
 import 'package:mood_app/screens/happy.dart';
+import 'package:mood_app/screens/sad.dart';
 
 class MoodHome extends StatelessWidget {
   static String id = 'mood_home';
@@ -61,13 +63,15 @@ class MoodHome extends StatelessWidget {
             ),
             Row(
               children: <Widget>[
-                colorButtonShape('Happy', Color(0xffFFE382), () {
+                colorButtonShape('Happy', kYellowColor, () {
                   Navigator.pushNamed(context, HappyFace.id);
                 }),
-                colorButtonShape('Angry', Color(0xffFF8291), () {
+                colorButtonShape('Angry', kPinkColor, () {
                   Navigator.pushNamed(context, AngryScreen.id);
                 }),
-                colorButtonShape('Sad', Color(0xff82E8FF), () {}),
+                colorButtonShape('Sad', kBlueColor, () {
+                  Navigator.pushNamed(context, SadFacePage.id);
+                }),
               ],
             )
           ],
